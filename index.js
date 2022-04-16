@@ -16,9 +16,9 @@ var u = require('lodash');
 var fs = require('fs');
 
 
-const pinClk = 0;
-const pinDt = 1;
-const pinSwitch = 2;  // Optional switch
+const pinClk = 4; //GPIO 23
+const pinDt = 5; //GPIO 24
+const pinSwitch = 3;  // Optional switch
 
 const rotary = new Rotary(pinClk, pinDt, pinSwitch);
 
@@ -35,11 +35,18 @@ const rotary = new Rotary(pinClk, pinDt, pinSwitch);
 var spi = SPI.initialize("/dev/spidev0.0"),
     test = Buffer.from("Hello, World!");
 
+spi.transfer(test, test.length, function (e,d) {
+    if (e) console.error(e);
+    else console.log("Got \""+d.toString()+"\" back.");
+    
+    if (test.toString() === d.toString()) {
+        console.log(msg);
+    } else {
+        // NOTE: this will likely happen unless MISO is jumpered to MOSI
+        console.warn(msg);
+        process.exit(-2);
+    }
+});
 
-const rotaryTypes = new Array(
-	"...",
-	"1/1",
-	"1/2",
-	"...",
-	"1/4"
-);
+
+
