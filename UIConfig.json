@@ -1,0 +1,45 @@
+{
+	"page": {
+		"label": "TRANSLATE.VOLUMIO_PARAMETRIC"
+	},
+	"sections": [
+		 {
+			"id": "section_account",
+			"element": "section",
+			"label": "TRANSLATE.PARAMETRIC_SETTINGS",
+			"icon": "fa-plug",
+			"onSave": {
+				"type": "controller",
+				"endpoint": "audio_interface/SPIvolumecontrol",
+				"method": "volumeChanged"
+			},
+			"saveButton": {
+				"label": "TRANSLATE.APPLY",
+				"data": [
+					"mg",
+				]
+			},
+			"content": [
+				{
+					"id": "mg",
+					"element": "equalizer",
+					"label": "TRANSLATE.MG",
+					"description": "TRANSLATE.MG_DESC",
+					"config": {
+						"orientation": "horizontal",
+						"bars": [
+							{
+								"min": "0",
+								"max": "100",
+								"step": "1",
+								"value": "0",
+								"ticksLabels": [
+									"%"
+								],
+								"tooltip": "always"
+							}
+						]
+					}
+				}
+    ]}
+}
