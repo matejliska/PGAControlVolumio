@@ -1,0 +1,9 @@
+{
+ "VOLUMIO_PARAMETRIC":"PGA volume control",
+ "PARAMETRIC_SETTINGS":"Settings",
+ "MG":"Master Gain",
+ "MG_DESC":"Master Gain of the equalizer. Reduce the value to prevent clipping",
+ "APPLY":"Apply",
+ "SAVE":"Save"
+ 
+}
