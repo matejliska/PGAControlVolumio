@@ -1,0 +1,8 @@
+{
+ "VOLUMIO_PARAMETRIC":"PGA control volume",
+ "PARAMETRIC_SETTINGS":"Réglages",
+ "MG":"Gain global",
+ "MG_DESC":"Gain global de l'egaliseur. Réduire la valeur pour éviter les saturations",
+ "APPLY":"Appliquer",
+ "SAVE":"Sauver"
+}
