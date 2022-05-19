@@ -1,0 +1,7 @@
+{
+ "VOLUMIO_PARAMETRIC":"PGA Lautstärkeregelung",
+ "PARAMETRIC_SETTINGS":"Instellingen",
+ "MG":"Hoofdvolume",
+ "MG_DESC":"Hoofdvolume van de equalizer. Verklein de waarde om knippen te voorkomen",
+ "APPLY":"Toepassen"
+}
