@@ -1,0 +1,24 @@
+
+{
+	"name": "PGAControlVolumio",
+	"version": "0.1",
+	"description": "Plugin for SPI volume change",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "MaTejL",
+	"license": "GPL 3.0",
+	"volumio_info": {
+		"prettyName": "Volumio PGA control",
+		"plugin_type": "user_interface",
+		"icon": "fa-sliders fa-rotate-90",
+		"boot_priority": 10
+	},
+	"dependencies": {
+		"fs-extra": "^0.28.0",
+		"child_process": "",
+		"kew": "^0.7.0",
+		"v-conf": "^0.10.0"
+	}
+}
