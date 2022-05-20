@@ -85,7 +85,7 @@ SPIvolumecontrol.prototype.volumeChanged = function (data) {
 
   self.config.set('mg', data['mg']);
   
-  self.logger.info('Configurations of equalizer have been set');
+  self.logger.info('Configurations of volume have been set');
 
   self.rebuildvolSPI()
     .then(function (e) {
