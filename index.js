@@ -9,6 +9,7 @@ var config = new (require('v-conf'))();
 
 var SPI = require('pi-spi');
 var spi = SPI.initialize("/dev/spidev0.0");
+spi.clockSpeed([7608]);
 
 
 module.exports = SPIvolumecontrol;
@@ -109,7 +110,7 @@ SPIvolumecontrol.prototype.rebuildvolSPI = function () {
     var outputLR = parseInt(self.config.get('mg'));
     outputLR += 100;
     var outSub = outputLR + 15;
-    var test = Buffer.from(outSub, outSub, outputLR, outputLR)
+    var test = Buffer.from([outSub, outSub, outputLR, outputLR]);
 
       spi.transfer(test, test.length, function (e,d) {
         if (e) console.error(e);
